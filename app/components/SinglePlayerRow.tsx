@@ -23,10 +23,10 @@ export default function SinglePlayerRow({
     
     <div className="flex relative p-1 px-3 items-center w-full bg-secondary_dark rounded-lg mt-1 text-sm">
       <div className="flex items-center text-white">{fullName}</div>
-      <div className="flex">
-        <span className='absolute bottom-1 left-[175px] '>{formattedHeight}</span>
-        <span className='absolute bottom-1 left-[255px] '>{formattedWeight}</span>
-        <span className='absolute bottom-1 left-[350px]'>{formattedPosition}</span>
+      <div className="flex-1 flex justify-end gap-14 sm:gap-[105px] pr-8 sm:pr-12">
+        <span className=''>{formattedHeight}</span>
+        <span className=''>{formattedWeight}</span>
+        <span className=''>{formattedPosition}</span>
       </div>
     </div>
   );

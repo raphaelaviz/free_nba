@@ -37,7 +37,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
         <div className='text-3xl font-bold text-white mb-6'>Team Profile</div>
 
         {/* Team Header Section */}
-        
+
         <div className='flex flex-col md:flex-row md:h-36 rounded-lg border-red-500 border-2 w-full'>
           <div className='flex items-center p-2 sm:p-0 sm:pr-8 rounded-lg'>
             <div className='w-24 h-24 ml-8'>
@@ -96,7 +96,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
             <div className="flex justify-around p-1 px-3 items-center w-full bg-secondary_dark text-primary_gray rounded-lg mt-1 text-sm">
               <span className='mr-16'>Name</span>
               <span>Height</span>
-              <span>Weight (£)</span>
+              <span>Weight(£)</span>
               <span>Position</span>
             </div>
 

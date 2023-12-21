@@ -24,7 +24,7 @@ export interface MatchRowProps {
         <span className="-ml-8 sm:-mr-2 -mr-4 sm:-ml-5">-</span>
   
         <div className="flex">
-          <span className={`w-10 flex items-center justify-center ${isWinner ? 'text-red-500' : 'text-green-500'}`}>{visitorTeamScore}</span>
+          <span className={`w-10 flex items-center justify-center mr-2 ${isWinner ? 'text-red-500' : 'text-green-500'}`}>{visitorTeamScore}</span>
           <div className={`flex-shrink-0 w-16 sm:w-48 ${isWinner ? 'sm:w-28' : ''}`}>{visitorTeam}</div>
         </div>
       </div>
