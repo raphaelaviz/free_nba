@@ -24,7 +24,7 @@ export default function DivisionColumn({ columnTitle, teams }: DivisionColumnPro
             >
               <Image
                 src={logosMap.find((logo) => logo.id === team.id)?.logo}
-                alt={team.full_name}
+                alt={`${team.full_name}'s logo`}
                 className="w-8 h-8 mr-2"
               />
               {team.full_name}
