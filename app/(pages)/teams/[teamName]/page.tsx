@@ -35,12 +35,16 @@ export default async function TeamPage({ params }: TeamPageProps) {
     <main className='bg-primary_dark w-full min-h-screen flex flex-col items-center justify-center py-20 px-2 sm:px-32 text-white overflow-x-hidden'>
       <div className='w-full min-h-screen'>
         <div className='text-3xl font-bold text-white mb-6'>Team Profile</div>
+
+        {/* Team Header Section */}
+        
         <div className='flex flex-col md:flex-row md:h-36 rounded-lg border-red-500 border-2 w-full'>
           <div className='flex items-center p-2 sm:p-0 sm:pr-8 rounded-lg'>
             <div className='w-24 h-24 ml-8'>
               <Image
                 src={logosMap.find((logo) => logo.id === team.id)?.logo}
                 alt={'Team Logo'}
+                priority={true}
               />
             </div>
             <div className='flex flex-col'>
