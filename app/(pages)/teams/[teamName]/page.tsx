@@ -27,6 +27,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
   const allPlayersData = await getAllPlayersData();
 
   // Organizes the games by chronological order.
+
   const sortedGamesByDate = gamesData.data
     .sort((a: { date: string }, b: { date: string }) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 10);
@@ -40,6 +41,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
 
         <div className='flex flex-col md:flex-row md:h-36 rounded-lg border-red-500 border-2 w-full'>
           <div className='flex items-center p-2 sm:p-0 sm:pr-8 rounded-lg'>
+            
             <div className='w-24 h-24 ml-8'>
               <Image
                 src={logosMap.find((logo) => logo.id === team.id)?.logo}
@@ -47,11 +49,14 @@ export default async function TeamPage({ params }: TeamPageProps) {
                 priority={true}
               />
             </div>
+
             <div className='flex flex-col'>
               <div className='flex items-center justify-center ml-10 sm:ml-5 font-bold'>{singleTeamData.full_name}</div>
               <div className='flex items-center justify-center ml-10 sm:ml-0 sm:mt-5 font-bold'>{singleTeamData.abbreviation}</div>
             </div>
+
           </div>
+
           <div className='flex-1 flex items-center justify-around bg-secondary_dark rounded-lg p-2 sm:p-0 '>
             <div className='flex flex-col items-center'>
               <span className='text-primary_gray mb-2 text-xs sm:text-sm'>CITY</span>
@@ -74,7 +79,12 @@ export default async function TeamPage({ params }: TeamPageProps) {
           <div className='bg-terciary_dark w-full md:w-[660px] rounded-lg p-3'>
             <div className='flex justify-between px-2'>
               <h2 className='text-white text-lg font-bold mb-3'>Most recent games</h2>
-              <Link className='flex items-center text-sm hover:underline' href={`/teams/${team.name}/all-games`.toLowerCase()}>See all games</Link>
+              <Link
+                className='flex items-center text-sm hover:underline' 
+                href={`/teams/${team.name}/all-games`.toLowerCase()}
+               >
+                See all games
+              </Link>
             </div>
             
             {sortedGamesByDate.map((game: Game) => (
@@ -103,7 +113,6 @@ export default async function TeamPage({ params }: TeamPageProps) {
             {allPlayersData.data
               .filter((player: Player) => player.team.id === team.id)
               .map((player: Player) => (
-                
                 <SinglePlayerRow
                   key={player.id}
                   fullName={`${player.first_name} ${player.last_name}`}
@@ -113,8 +122,13 @@ export default async function TeamPage({ params }: TeamPageProps) {
                   position={player.position}
                 />
               ))}
-
+            
+            {allPlayersData.data.filter((player: Player) => player.team.id === team.id).length === 0 && (
+              <p className="text-white text-center mt-4">No players found for this team.</p>
+            )}
           </div>
+          
+
         </div>
       </div>
     </main>

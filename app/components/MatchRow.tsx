@@ -13,7 +13,7 @@ export interface MatchRowProps {
     const isWinner = homeTeamScore > visitorTeamScore;
   
     return (
-      <div className="flex gap-4 p-1 px-3 items-center w-full bg-secondary_dark rounded-lg mt-1 text-xs sm:text-sm">
+      <div className="flex gap-4 p-1 px-3 items-center w-full bg-secondary_dark rounded-lg mt-1 text-xs sm:text-sm" data-testid='match-row'>
         <div className="flex items-center text-primary_gray">{date}</div>
   
         <div className="flex">

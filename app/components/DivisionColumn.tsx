@@ -11,7 +11,7 @@ interface DivisionColumnProps {
 export default function DivisionColumn({ columnTitle, teams }: DivisionColumnProps) {
 
   return (
-    <div className="w-72">
+    <div className="w-72" data-testid='division-column'>
       <h2 className="text-white text-lg font-bold mb-4">{columnTitle}</h2>
       <div className='flex'>
         <div>

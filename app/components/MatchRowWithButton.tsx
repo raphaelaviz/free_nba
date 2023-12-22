@@ -12,6 +12,10 @@ export interface MatchRowWithButtonProps {
     handleGameClick: (gameId: number) => void;
   }
   
+
+
+  // This component isn't being used at the moment. It was meant to fetch the statsData.
+
   export default function MatchRowWithButton(props: MatchRowWithButtonProps) {
     const { date, gameId, homeTeam, homeTeamScore, visitorTeamScore, visitorTeam, handleGameClick } = props;
   

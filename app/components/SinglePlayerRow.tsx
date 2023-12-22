@@ -15,6 +15,7 @@ export default function SinglePlayerRow({
   weightPounds,
   position,
 }: SinglePlayerRowProps) {
+
   const formattedHeight = heightFeet !== null && heightInches !== null ? `${heightFeet}'${heightInches}"` : '-';
   const formattedWeight = weightPounds !== null ? weightPounds.toString() : '-';
   const formattedPosition = position.trim() !== '' ? position : '-';
@@ -24,9 +25,9 @@ export default function SinglePlayerRow({
     <div className="flex relative p-1 px-3 items-center w-full bg-secondary_dark rounded-lg mt-1 text-sm">
       <div className="flex items-center text-white">{fullName}</div>
       <div className="flex-1 flex justify-end gap-14 sm:gap-[105px] pr-8 sm:pr-12">
-        <span className=''>{formattedHeight}</span>
-        <span className=''>{formattedWeight}</span>
-        <span className=''>{formattedPosition}</span>
+        <span>{formattedHeight}</span>
+        <span className={formattedWeight.length > 2 ? '-ml-8' : ''}>{formattedWeight}</span>
+        <span className={formattedPosition.length > 2 ? '-ml-4' : ''}>{formattedPosition}</span>
       </div>
     </div>
   );
