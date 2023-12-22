@@ -12,7 +12,7 @@ You can see the deployed version at https://free-nba.vercel.app/ for convenience
 
 The project achieved virtually perfect scores in all audits in Google Lighthouse. The 94 Accessibility score is due to a small detail: the low contrast between the dark background and the red font in the losing team score. Easily fixable and adjustable.
 
-To run these test, just open the "Inspect" window on Google Chrome, then go to the the Lighthouse tab and choose "Analyze page load".
+To run these tests, just open the "Inspect" window on Google Chrome, then go to the the Lighthouse tab and choose "Analyze page load".
 
 ## Responsiveness
 
