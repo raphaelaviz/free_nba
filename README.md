@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Running the project
 
-## Getting Started
+Install all necessary dependencies with **npm install** and run the project with **npm run dev**. There's a chance you might need to update your Node version before.
 
-First, run the development server:
+## Deployed version
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+You can see the deployed version at https://free-nba.vercel.app/ for convenience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Google Lighthouse scores for the project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Lighthouse](public/Lighthouse.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The project achieved virtually perfect scores in all audits in Google Lighthouse. The 94 Accessibility score is due to a small detail: the low contrast between the dark background and the red font in the losing team score. Easily fixable and adjustable.
 
-## Learn More
+To run these test, just open the "Inspect" window on Google Chrome, then go to the the Lighthouse tab and choose "Analyze page load".
 
-To learn more about Next.js, take a look at the following resources:
+## Responsiveness
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+All pages are fully responsive for mobile screen sizes.
